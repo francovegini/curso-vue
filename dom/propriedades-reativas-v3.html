@@ -18,8 +18,14 @@
         },
         computed: {
             resultado() {
-                console.log('metodo computed chamado')
                 return this.contador >= 5 ? 'Maior ou igual a 5' : 'Menor que 5';
+            }
+        },
+        watch: {
+            contador(valorNovo, valorAntigo) {
+                setTimeout(() => {
+                    this.contador = 0;
+                }, 2000);
             }
         },
         methods: {
@@ -29,11 +35,7 @@
 
             diminuir() {
                 this.contador--;
-            },
-            // resultado() {
-            //     console.log('metodo chamado')
-            //     return this.contador >= 5 ? 'Maior ou igual a 5' : 'Menor que 5';
-            // }
+            }
         }
     })
 </script>
