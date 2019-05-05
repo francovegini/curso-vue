@@ -9,7 +9,7 @@ new Vue({
         }
     },
     watch: {
-        contador() {
+        resultado() {
             setTimeout(() => {
                 this.contador = 0;
             }, 5000);
