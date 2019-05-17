@@ -4,7 +4,8 @@
 <div id="app">
     <ul>
         <li v-for="(cor, i) in cores"
-        :key="cor">{{ cor }} - {{ i }}</li>
+            :key="cor">{{ cor }} - {{ i }}
+        </li>
     </ul>
     <button @click="cores.push('branca')">Adicionar</button>
     <hr>
