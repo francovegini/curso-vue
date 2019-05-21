@@ -4,7 +4,11 @@ new Vue({
         playerLife: 100,
         monsterLife: 100,
     },
-    computed: {},
+    computed: {
+        hasResult() {
+            return this.playerLife == 0 || this.monsterLife == 0;
+        }
+    },
     methods: {},
     watch: {}
 });
