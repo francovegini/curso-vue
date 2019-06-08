@@ -1,4 +1,4 @@
 # Curso-VUE
 
-Repository to study VueJS.
+Repository to study VueJS
 
