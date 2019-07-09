@@ -4,11 +4,3 @@
         <div>Curso Vue &copy; {{ new Date().getFullYear() }}</div>
     </v-footer>
 </template>
-
-<script>
-
-</script>
-
-<style>
-
-</style>
