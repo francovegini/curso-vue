@@ -8,10 +8,10 @@
 </template>
 
 <script>
-    import Footer from "./Footer";
-    import Carousel from "./Carousel";
-    import Toolbar from "./Toolbar";
-    import Menu from "./Menu";
+    import Footer from "@/components/template/Footer";
+    import Carousel from "@/components/widgets/Carousel";
+    import Toolbar from "@/components/template/Toolbar";
+    import Menu from "@/components/template/Menu";
 
     export default {
         components: {
