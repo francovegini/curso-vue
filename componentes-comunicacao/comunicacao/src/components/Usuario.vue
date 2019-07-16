@@ -5,29 +5,29 @@
         <button @click="alterarNome">Alterar nome</button>
         <hr>
         <div class="componentes">
-            <app-usuario-info />
-            <app-usuario-editar />
+            <app-usuario-info :nome="nome"/>
+            <app-usuario-editar/>
         </div>
     </div>
 </template>
 
 <script>
-import AppUsuarioInfo from './UsuarioInfo'
-import AppUsuarioEditar from './UsuarioEditar'
+    import AppUsuarioInfo from "./UsuarioInfo";
+    import AppUsuarioEditar from "./UsuarioEditar";
 
-export default {
-    components: { AppUsuarioInfo, AppUsuarioEditar },
-    data() {
-        return {
-            nome: 'Pedro'
+    export default {
+        components: {AppUsuarioInfo, AppUsuarioEditar},
+        data() {
+            return {
+                nome: "Pedro"
+            };
+        },
+        methods: {
+            alterarNome() {
+                this.nome = "Ana";
+            }
         }
-    },
-    methods: {
-        alterarNome() {
-            this.nome = 'Ana'
-        }
-    }
-}
+    };
 </script>
 
 <style scoped>
