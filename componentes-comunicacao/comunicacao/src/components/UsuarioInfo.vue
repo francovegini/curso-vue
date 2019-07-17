@@ -7,21 +7,23 @@
 </template>
 
 <script>
-export default {
-    props: {
-        nome: {
-            type: String,
-            // default: "Valor padrão",
-            required: true
-
+    export default {
+        props: {
+            nome: {
+                type: String,
+                // default: "Valor padrão",
+                // required: true,
+                default: function () {
+                    return Array(10).fill(0).join(",");
+                }
+            }
+        },
+        methods: {
+            inverterNome() {
+                return this.nome.split("").reverse().join("");
+            }
         }
-    },
-    methods: {
-        inverterNome() {
-            return this.nome.split('').reverse().join('');
-        }
-    }
-}
+    };
 </script>
 
 <style scoped>
