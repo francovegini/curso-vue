@@ -12,8 +12,8 @@
 
         <v-divider></v-divider>
 
-        <v-list dense class="pt-0">
-            <v-list-tile v-for="item in itensMenu" :key="item.titulo">
+        <v-list class="pt-0" dense>
+            <v-list-tile :key="item.titulo" v-for="item in itensMenu">
                 <v-list-tile-action>
                     <v-icon>{{ item.icon }}</v-icon>
                 </v-list-tile-action>
