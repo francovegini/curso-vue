@@ -11,20 +11,20 @@
 
 <script>
     const vm = new Vue({
-        el: '#app',
+        el: "#app",
         data: {
-            aula: 'Aula: Usando Refs',
-            modulo: 'Módulo: Instância Vue'
+            aula: "Aula: Usando Refs",
+            modulo: "Módulo: Instância Vue"
         },
         methods: {
             alterarAula() {
-                this.aula += '#'
+                this.aula += "#";
             },
             alterarModulo() {
-                this.modulo += '#'
+                this.modulo += "#";
             }
         }
-    })
+    });
 
-    vm.$refs.aulaRef.innerText = 'Alterado diretamente';
+    vm.$refs.aulaRef.innerText = "Alterado diretamente";
 </script>

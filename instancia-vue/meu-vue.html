@@ -13,30 +13,30 @@
         for (let atr in this.$data) {
             Object.defineProperty(this, atr, {
                 get: () => {
-                    return this.$data[atr]
+                    return this.$data[atr];
                 },
                 set: value => {
-                    this.$data[atr] = value
+                    this.$data[atr] = value;
                 }
-            })
+            });
         }
 
         // Interpolação
-        const regex =  /\{\{([\s\w+*-]*)\}\}/g
+        const regex = /\{\{([\s\w+*-]*)\}\}/g;
         this.$el.innerHTML = this.$el.innerHTML.replace(regex, (match, $1) => {
-            const value = this[$1.trim()]
-            return value ? value : eval($1)
-        })
+            const value = this[$1.trim()];
+            return value ? value : eval($1);
+        });
 
     }
 
     const vm = new MeuVue({
-        el: '#app',
+        el: "#app",
         data: {
-            nome: 'Maria',
-            sobrenome: 'Silva'
+            nome: "Maria",
+            sobrenome: "Silva"
         }
     });
 
-    console.log(vm.nome)
+    console.log(vm.nome);
 </script>

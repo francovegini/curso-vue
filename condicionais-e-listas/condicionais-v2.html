@@ -6,18 +6,18 @@
     <p v-else-if="anonimo">Navegando como anônimo</p>
     <p v-else>Nenhum usuário logado</p>
     <button @click="logado = !logado">
-        {{ logado ? 'Sair' : 'Entrar'}}
+        {{ logado ? "Sair" : "Entrar"}}
     </button>
     <input type="checkbox" v-model="anonimo">
 </div>
 
 <script>
     new Vue({
-        el: '#app',
+        el: "#app",
         data: {
-            nome: 'Maria',
+            nome: "Maria",
             logado: false,
             anonimo: false
         }
-    })
+    });
 </script>

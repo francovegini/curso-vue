@@ -1,15 +1,15 @@
 new Vue({
-    el: '#desafio',
+    el: "#desafio",
     data: {
-        valor: '',
-        valor2: ''
+        valor: "",
+        valor2: ""
     },
     methods: {
         mostrarAlerta() {
-            alert('Botao pressionado!')
+            alert("Botao pressionado!");
         },
         armazenarValor(event) {
             this.valor = event.target.value;
         }
     }
-})
+});

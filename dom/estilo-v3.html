@@ -31,9 +31,9 @@
 
 <div id="app">
     <div class="caixas">
-        <div class="demo" @click="aplicarC1 = !aplicarC1" :class="estilo1"></div>
+        <div :class="estilo1" @click="aplicarC1 = !aplicarC1" class="demo"></div>
         <div class="demo"></div>
-        <div class="demo" :class="[classeCss, {girar: aplicarGirar}]"></div>
+        <div :class="[classeCss, {girar: aplicarGirar}]" class="demo"></div>
     </div>
     <hr>
     <input type="text" v-model="classeCss">
@@ -41,10 +41,10 @@
 
 <script>
     new Vue({
-        el: '#app',
+        el: "#app",
         data: {
             aplicarC1: false,
-            classeCss: 'c1',
+            classeCss: "c1",
             aplicarGirar: true,
         },
         computed: {
@@ -52,8 +52,8 @@
                 return {
                     c1: this.aplicarC1,
                     c2: !this.aplicarC1,
-                }
+                };
             }
         }
-    })
+    });
 </script>

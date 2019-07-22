@@ -15,28 +15,28 @@
     const vm1 = new Vue({
         el: "#app1",
         data: {
-            titulo1: 'Teste 1'
+            titulo1: "Teste 1"
         },
         methods: {
             alterar() {
-                vm2.titulo2 += '????';
+                vm2.titulo2 += "????";
             }
         }
-    })
+    });
 
     const vm2 = new Vue({
         el: "#app2",
         data: {
-            titulo2: 'Teste 2'
+            titulo2: "Teste 2"
         },
         methods: {
             alterar() {
-                vm1.titulo1 += '!!!';
+                vm1.titulo1 += "!!!";
             }
         }
-    })
+    });
 
     setTimeout(() => {
-        vm1.titulo1 = 'Alterado pelo timer!'
-    }, 2000)
+        vm1.titulo1 = "Alterado pelo timer!";
+    }, 2000);
 </script>

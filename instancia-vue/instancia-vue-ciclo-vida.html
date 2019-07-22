@@ -9,34 +9,34 @@
 
 <script>
     new Vue({
-        el: '#app',
+        el: "#app",
         data: {
-            titulo: 'Ciclo de Vida'
+            titulo: "Ciclo de Vida"
         },
         beforeCreate() {
-            console.log('Antes de criar')
+            console.log("Antes de criar");
         },
         created() {
-            console.log('Criado')
+            console.log("Criado");
         },
         beforeMount() {
-            console.log('Antes de montar (DOM)')
+            console.log("Antes de montar (DOM)");
         },
         mounted() {
-            console.log('DOM montada')
+            console.log("DOM montada");
         },
         beforeUpdate() {
-            console.log('Antes de atualizar')
+            console.log("Antes de atualizar");
         },
         updated() {
-            console.log('Atualizado')
+            console.log("Atualizado");
         },
         beforeDestroy() {
-            console.log('Antes de destruir')
+            console.log("Antes de destruir");
         },
         destroyed() {
-            console.log('Destruído')
+            console.log("Destruído");
         }
 
-    })
+    });
 </script>

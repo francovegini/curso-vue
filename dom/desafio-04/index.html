@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="styles.css">
+<link href="styles.css" rel="stylesheet">
 <script src="https://unpkg.com/vue"></script>
 
 <div id="desafio">
@@ -9,7 +9,7 @@
     <h2>#01</h2>
     <div>
         <button @click="iniciarEfeito">Iniciar Efeito</button>
-        <div id="efeito" :class="classe1"></div>
+        <div :class="classe1" id="efeito"></div>
     </div>
 
     <!-- 2) Crie duas classes CSS e associe a div usando a
@@ -30,7 +30,7 @@
     <h2>#04</h2>
     <div>
         <input type="text" v-model="classe4">
-        <input type="text" @input="setPerigo">
+        <input @input="setPerigo" type="text">
         <div :class="[classe4, {perigo}]"></div>
     </div>
 
@@ -48,7 +48,7 @@
     <div>
         <button @click="iniciarProgresso">Iniciar</button>
         <div class="barra-progresso">
-            <div class="progresso" :style="{width}"></div>
+            <div :style="{width}" class="progresso"></div>
         </div>
     </div>
 </div>

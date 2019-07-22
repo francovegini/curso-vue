@@ -1,11 +1,11 @@
 new Vue({
-    el: '#desafio',
+    el: "#desafio",
     data: {
         contador: 0,
     },
     computed: {
         resultado() {
-            return this.contador == 37 ? 'Igual a 37' : 'Diferente de 37';
+            return this.contador == 37 ? "Igual a 37" : "Diferente de 37";
         }
     },
     watch: {

@@ -17,15 +17,15 @@
 </style>
 
 <div id="app">
-    <div class="demo" @click="aplicarC1 = !aplicarC1" :class="{c1: aplicarC1}"></div>
+    <div :class="{c1: aplicarC1}" @click="aplicarC1 = !aplicarC1" class="demo"></div>
 </div>
 
 
 <script>
     new Vue({
-        el: '#app',
+        el: "#app",
         data: {
             aplicarC1: false,
         }
-    })
+    });
 </script>

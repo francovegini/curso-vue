@@ -21,13 +21,13 @@
 </style>
 
 <div id="app">
-    <div class="demo" @click="aplicarC1 = !aplicarC1" :class="estilo1"></div>
+    <div :class="estilo1" @click="aplicarC1 = !aplicarC1" class="demo"></div>
 </div>
 
 
 <script>
     new Vue({
-        el: '#app',
+        el: "#app",
         data: {
             aplicarC1: false,
         },
@@ -36,8 +36,8 @@
                 return {
                     c1: this.aplicarC1,
                     c2: !this.aplicarC1,
-                }
+                };
             }
         }
-    })
+    });
 </script>
