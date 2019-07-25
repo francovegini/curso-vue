@@ -9,9 +9,7 @@
                 </v-list-tile>
             </v-list>
         </v-toolbar>
-
         <v-divider></v-divider>
-
         <v-list class="pt-0" dense>
             <v-list-tile :key="item.titulo" v-for="item in itensMenu">
                 <v-list-tile-action>
