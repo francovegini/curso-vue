@@ -7,10 +7,10 @@
         <button @click="alterarNome">Alterar nome</button>
         <hr>
         <div class="componentes">
-            <app-usuario-info :nome="nome"
-                              :idade="idade"
-                              @nomeMudou="nome = $event"
-                              :reiniciarFn="reiniciarNome"/>
+            <app-usuario-info :idade="idade"
+                              :nome="nome"
+                              :reiniciarFn="reiniciarNome"
+                              @nomeMudou="nome = $event"/>
             <app-usuario-editar :idade="idade"/>
         </div>
     </div>
