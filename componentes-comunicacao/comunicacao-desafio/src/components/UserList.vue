@@ -5,13 +5,9 @@
                 <th>#ID</th>
                 <th>Name</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Smith</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Jackson</td>
+            <tr v-for="user in userList">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
             </tr>
         </table>
     </div>
@@ -19,7 +15,18 @@
 
 <script>
     export default {
-        name: "UserList"
+        name: "UserList",
+        data() {
+            return {
+                userList: [
+                    {id: 1, name: "Ana", age: 31},
+                    {id: 2, name: "Carlos", age: 22},
+                    {id: 3, name: "Daniel", age: 40},
+                    {id: 4, name: "Ema", age: 17},
+                    {id: 5, name: "Lia", age: 28}
+                ]
+            };
+        }
     };
 </script>
 
