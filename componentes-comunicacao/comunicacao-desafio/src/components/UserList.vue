@@ -41,7 +41,7 @@
 <style scoped>
     .componente {
         flex: 1;
-        background-color: #ec485f;
+        background-color: #63B8FF;
         color: #fff;
     }
 

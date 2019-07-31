@@ -1,6 +1,6 @@
 <template>
     <div class="componente">
-        <h1 v-if="!hasUser">Usuário não selecionado!</h1>
+        <p v-if="!hasUser">Usuário não selecionado!</p>
         <span v-else>
             <p>ID: {{ user.id }}</p>
             <p>Nome: {{ user.name }}</p>
