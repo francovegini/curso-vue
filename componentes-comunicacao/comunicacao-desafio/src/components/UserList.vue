@@ -5,7 +5,7 @@
                 <th>#ID</th>
                 <th>Name</th>
             </tr>
-            <tr v-for="user in userList">
+            <tr v-for="user in userList" @click="selectedUser(user)">
                 <td>{{ user.id }}</td>
                 <td>{{ user.name }}</td>
             </tr>
@@ -14,6 +14,9 @@
 </template>
 
 <script>
+
+    import barramento from "@/barramento";
+
     export default {
         name: "UserList",
         data() {
@@ -26,6 +29,11 @@
                     {id: 5, name: "Lia", age: 28}
                 ]
             };
+        },
+        methods: {
+            selectedUser(user) {
+                barramento.selectedUser(user);
+            }
         }
     };
 </script>
