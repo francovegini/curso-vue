@@ -1,6 +1,6 @@
 <template>
     <div class="componente">
-        <h1>User Detail</h1>
+        <h1>Usuário não selecionado!</h1>
     </div>
 </template>
 
