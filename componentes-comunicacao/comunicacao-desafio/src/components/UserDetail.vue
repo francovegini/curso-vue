@@ -1,16 +1,15 @@
 <template>
     <div class="componente">
-        <p v-if="!hasUser">Usuário não selecionado!</p>
-        <span v-else>
+        <h2 v-if="!hasUser">Usuário não selecionado!</h2>
+        <div v-else>
             <p>ID: {{ user.id }}</p>
             <p>Nome: {{ user.name }}</p>
             <p>Idade: {{ user.age }}</p>
-        </span>
+        </div>
     </div>
 </template>
 
 <script>
-
     import barramento from "@/barramento";
 
     export default {
@@ -34,7 +33,6 @@
 <style scoped>
     .componente {
         flex: 1;
-        background-color: #63B8FF;
-        color: #fff;
+        border: 1px solid #CCC;
     }
 </style>

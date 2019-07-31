@@ -1,9 +1,7 @@
 <template>
     <div class="container">
-        <div class="componentes">
             <user-list/>
             <user-detail/>
-        </div>
     </div>
 </template>
 
@@ -19,12 +17,8 @@
 
 <style scoped>
     .container {
-        background-color: #27363b;
-        color: #fff;
-        padding: 10px;
-    }
-
-    .componentes {
+        font-size: 2rem;
         display: flex;
+        margin: 20px;
     }
 </style>
