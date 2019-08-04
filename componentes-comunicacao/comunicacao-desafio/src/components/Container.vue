@@ -21,7 +21,5 @@
         display: flex;
         margin: 20px;
     }
-    .h1 {
-        margin: 20px;
-    }
+
 </style>
