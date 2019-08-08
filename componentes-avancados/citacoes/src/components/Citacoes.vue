@@ -49,4 +49,8 @@
         flex-direction: column;
         align-items: center;
     }
+
+    h1 {
+        color: green;
+    }
 </style>
