@@ -1,30 +1,30 @@
 <template>
-	<div id="app">
-		<Citacoes />
-		<Sobre />
-	</div>
+    <div id="app">
+        <Citacoes/>
+        <Sobre/>
+    </div>
 </template>
 
 <script>
-import Citacoes from './components/Citacoes'
-import Sobre from './components/Sobre'
+    import Citacoes from "./components/Citacoes";
+    import Sobre from "./components/Sobre";
 
-export default {
-	components: { Citacoes, Sobre }
-}
+    export default {
+        components: {Citacoes, Sobre}
+    };
 </script>
 
 <style>
-	#app {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 100vh;
-		font-size: 1.6rem;
-	}
+    #app {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 1.6rem;
+    }
 
-	button {
+    button {
         outline: none;
         padding: 5px 15px 10px;
         margin: 10px 5px;
