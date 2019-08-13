@@ -4,7 +4,9 @@
             <button @click="componente = 'Citacoes'">Citações</button>
             <button @click="componente = 'Sobre'">Sobre</button>
         </span>
-        <component :is="componente"></component>
+        <keep-alive>
+            <component :is="componente"></component>
+        </keep-alive>
     </div>
 </template>
 
@@ -16,8 +18,8 @@
         components: {Citacoes, Sobre},
         data() {
             return {
-                componente: 'Citacoes'
-            }
+                componente: "Citacoes"
+            };
         }
     };
 </script>
