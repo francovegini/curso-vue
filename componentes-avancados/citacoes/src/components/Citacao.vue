@@ -27,6 +27,6 @@
     }
 
     h1 {
-        color: red;;
+        color: red;
     }
 </style>
