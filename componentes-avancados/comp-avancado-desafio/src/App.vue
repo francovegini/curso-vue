@@ -1,11 +1,21 @@
 <template>
     <div id="app">
 		<span>
-			<button class="vermelho" @click="componente = 'Vermelho'">Carregar Componente Vermelho</button>
-			<button class="verde" @click="componente = 'Verde'">Carregar Componente Verde</button>
-			<button class="azul" @click="componente = 'Azul'">Carregar Componente Azul</button>
+			<button class="vermelho" @click="componente = 'Vermelho'">
+                Carregar Componente Vermelho
+            </button>
+			<button class="verde" @click="componente = 'Verde'">
+                Carregar Componente Verde
+            </button>
+			<button class="azul" @click="componente = 'Azul'">
+                Carregar Componente Azul
+            </button>
 		</span>
-        <component :is="componente"></component>
+
+        <component :is="componente">
+            <span>Conteúdo do Componente <strong>{{ componente }}</strong></span>
+        </component>
+
     </div>
 </template>
 
@@ -19,7 +29,7 @@
         components: {Vermelho, Verde, Azul},
         data() {
             return {
-                componente: "vermelho"
+                componente: "Vermelho"
             };
         }
     };
