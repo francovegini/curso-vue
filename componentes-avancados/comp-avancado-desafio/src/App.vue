@@ -1,13 +1,13 @@
 <template>
     <div id="app">
 		<span>
-			<button class="vermelho" @click="componente = 'Vermelho'">
+			<button @click="componente = 'Vermelho'" class="vermelho">
                 Carregar Componente Vermelho
             </button>
-			<button class="verde" @click="componente = 'Verde'">
+			<button @click="componente = 'Verde'" class="verde">
                 Carregar Componente Verde
             </button>
-			<button class="azul" @click="componente = 'Azul'">
+			<button @click="componente = 'Azul'" class="azul">
                 Carregar Componente Azul
             </button>
 		</span>
