@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import TaskGrid from "./components/TaskGrid.vue";
+    import TaskGrid from "./components/TaskGrid";
 
     export default {
         components: {TaskGrid},
