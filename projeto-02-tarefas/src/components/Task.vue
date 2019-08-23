@@ -48,5 +48,4 @@
         background-color: #4CAF50;
         text-decoration: line-through;
     }
-
 </style>
