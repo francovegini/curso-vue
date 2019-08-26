@@ -13,9 +13,9 @@
 
     export default {
         name: "TaskGrid",
-        components: {Task},
+        components: { Task },
         props: {
-            tasks: {type: Array, required: true}
+            tasks: { type: Array, required: true }
         }
     };
 </script>
