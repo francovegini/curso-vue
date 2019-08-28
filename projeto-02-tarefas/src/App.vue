@@ -29,6 +29,14 @@
                 return Math.round(done / total * 100) || 0;
             }
         },
+        watch: {
+            tasks: {
+                deep: true,
+                handler() {
+                    localStorage.setItem('tasks', JSON.stringify(this.tasks));
+                }
+            }
+        },
         methods: {
             addTask(task) {
                 const sameName = t => t.name === task.name;
@@ -47,6 +55,10 @@
             toggleTaskState(i) {
                 this.tasks[i].pending = !this.tasks[i].pending;
             }
+        },
+        created() {
+            const json = localStorage.getItem('tasks');
+            this.tasks = JSON.parse(json) || [];
         }
 
     };
