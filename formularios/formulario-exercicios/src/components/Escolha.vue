@@ -1,20 +1,20 @@
 <template>
     <div class="escolha"
-        @click="ligado = !ligado"
-        :class="{ligado, desligado: !ligado}">
+         @click="ligado = !ligado"
+         :class="{ligado, desligado: !ligado}">
         <div v-if="ligado" class="botao"></div>
         <div v-else class="botao"></div>
     </div>
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            ligado: false
+    export default {
+        data() {
+            return {
+                ligado: false
+            }
         }
     }
-}
 </script>
 
 <style scoped>
