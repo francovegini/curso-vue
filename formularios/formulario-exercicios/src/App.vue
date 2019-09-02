@@ -78,7 +78,6 @@
 </script>
 
 <style>
-
     body {
         background-color: #ECECEC;
     }
