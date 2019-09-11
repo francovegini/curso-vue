@@ -36,10 +36,11 @@
                     </span>
                 </Rotulo>
                 <Rotulo nome="Prioridade">
-                    <select>
+                    <select v-model="prioridade">
                         <option v-for="prioridade in prioridades"
                                 :key="prioridade.codigo"
-                                :value="prioridade.codigo">
+                                :value="prioridade.codigo"
+                                :selected="prioridade.codigo === 1">
                             {{ prioridade.nome }}
                         </option>
                     </select>
@@ -77,7 +78,7 @@
                     <span>{{ produto }}</span>
                 </Rotulo>
                 <Rotulo nome="Prioridade">
-                    <span>???</span>
+                    <span>{{ prioridade }}</span>
                 </Rotulo>
                 <Rotulo nome="Primeira Reclamação?">
                     <span>???</span>
@@ -99,6 +100,7 @@
                 mensagem: '',
                 caracteristicas: [],
                 produto: 'web',
+                prioridade: 1,
                 prioridades: [
                     { codigo: 1, nome: 'Sem prioridade' },
                     { codigo: 2, nome: 'Baixa' },
