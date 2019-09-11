@@ -41,7 +41,7 @@
                                 :key="prioridade.codigo"
                                 :value="prioridade.codigo"
                                 :selected="prioridade.codigo === 1">
-                            {{ prioridade.nome }}
+                            {{ prioridade.codigo }} - {{ prioridade.nome }}
                         </option>
                     </select>
                 </Rotulo>
