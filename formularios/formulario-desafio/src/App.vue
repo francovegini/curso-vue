@@ -3,13 +3,7 @@
         <h1>Formulário Desafio</h1>
         <div class="conteudo">
             <form class="painel" v-if="!enviado">
-                <div class="cabecalho">Formulário</div>
-                <!-- Exercicio 01 -->
-                <!-- Criar uma formulário de registro -->
-                <!-- Nome completo (Nome e Sobrenome) -->
-                <!-- Email -->
-                <!-- Senha -->
-                <!-- Armazenar Dados? (Sim/Não) -->
+                <div class="cabecalho"> Formulário</div>
                 <Rotulo nome="Nome">
                     <input type="text" v-model.trim="dados.nome">
                 </Rotulo>
@@ -23,20 +17,13 @@
                     <input type="password" v-model="dados.senha">
                 </Rotulo>
                 <Rotulo nome="Armazenar dados?">
-					<span class="mr-4">
-                        <input type="radio" value="true" v-model="dados.armazenarDados"> Sim
-                    </span>
-                    <span>
-                        <input type="radio" value="false" v-model="dados.armazenarDados"> Não
+                    <span class="mr-4">
+                        <input type="checkbox" v-model="dados.armazenarDados">
                     </span>
                 </Rotulo>
                 <NomeCompleto></NomeCompleto>
                 <hr>
                 <button @click.prevent="enviar">Enviar</button>
-
-                <!-- Exercicio 02 -->
-                <!-- Só mostrar o fomulário de não tiver sido submetido -->
-                <!-- Mostrar a área de Resultado apenas quando o formulário for submetido -->
 
                 <!-- Exercicio 03 -->
                 <!-- Crie um componente personalizado NomeCompleto -->
@@ -45,7 +32,7 @@
             <div class="painel" v-else>
                 <div class="cabecalho">Resultado</div>
                 <Rotulo nome="Nome completo">
-                    <span>{{ dados.nome }}  {{dados.sobrenome}}</span>
+                    <span>{{ dados.nome }} {{dados.sobrenome}}</span>
                 </Rotulo>
                 <Rotulo nome="E-mail">
                     <span>{{ dados.email }}</span>
