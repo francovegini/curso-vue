@@ -4,12 +4,7 @@
         <div class="conteudo">
             <form class="painel" v-if="!enviado">
                 <div class="cabecalho"> Formulário</div>
-                <Rotulo nome="Nome">
-                    <input type="text" v-model.trim="dados.nome">
-                </Rotulo>
-                <Rotulo nome="Sobrenome">
-                    <input type="text" v-model.trim="dados.sobrenome">
-                </Rotulo>
+                <NomeCompleto v-model="dados.nomeCompleto"/>
                 <Rotulo nome="E-mail">
                     <input type="text" v-model.trim="dados.email">
                 </Rotulo>
@@ -21,18 +16,13 @@
                         <input type="checkbox" v-model="dados.armazenarDados">
                     </span>
                 </Rotulo>
-                <NomeCompleto></NomeCompleto>
                 <hr>
                 <button @click.prevent="enviar">Enviar</button>
-
-                <!-- Exercicio 03 -->
-                <!-- Crie um componente personalizado NomeCompleto -->
-                <!-- Esse componente deve receber Nome e Sobrenome -->
             </form>
             <div class="painel" v-else>
                 <div class="cabecalho">Resultado</div>
                 <Rotulo nome="Nome completo">
-                    <span>{{ dados.nome }} {{dados.sobrenome}}</span>
+                    <span>{{ dados.nomeCompleto.nome }} {{ dados.nomeCompleto.sobrenome }}</span>
                 </Rotulo>
                 <Rotulo nome="E-mail">
                     <span>{{ dados.email }}</span>
@@ -58,8 +48,10 @@
         data() {
             return {
                 dados: {
-                    nome: '',
-                    sobrenome: '',
+                    nomeCompleto: {
+                        nome: '',
+                        sobrenome: ''
+                    },
                     email: '',
                     senha: '',
                     armazenarDados: true
