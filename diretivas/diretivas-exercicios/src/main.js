@@ -11,7 +11,6 @@ Vue.directive('destaque', {
 
 Vue.directive('destaque2', {
     bind(el, binding) {
-
         let atraso = 0;
         if (binding.modifiers['atrasar']) {
             atraso = 3000;
