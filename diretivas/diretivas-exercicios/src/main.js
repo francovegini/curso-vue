@@ -12,11 +12,18 @@ Vue.directive('destaque', {
 Vue.directive('destaque2', {
     bind(el, binding) {
 
-        if (binding.arg === 'fundo') {
-            el.style.backgroundColor = binding.value;
-        } else {
-            el.style.color = binding.value;
+        let atraso = 0;
+        if (binding.modifiers['atrasar']) {
+            atraso = 3000;
         }
+
+        setTimeout(() => {
+            if (binding.arg === 'fundo') {
+                el.style.backgroundColor = binding.value;
+            } else {
+                el.style.color = binding.value;
+            }
+        }, atraso)
     }
 });
 
