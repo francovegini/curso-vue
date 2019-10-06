@@ -10,7 +10,9 @@
         <p v-destaque2:fundo.atrasar="'lightblue'">Usando diretiva personalizada com parâmetro</p>
 
         <hr>
-        <p v-destaque-local.atrasar.alternar="{cor1: 'green', cor2: 'red', atraso: 2000, intervalo: 200}">Usando diretiva personalizada com parâmetro</p>
+        <p v-destaque-local.atrasar.alternar="{cor1: 'green', cor2: 'red', atraso: 2000, intervalo: 200}">
+            Usando diretiva personalizada com parâmetro
+        </p>
     </div>
 </template>
 
