@@ -5,6 +5,8 @@
         <p>{{ cpf | cpf }}</p>
         <p>{{ cpf | cpf | inverter}}</p>
         <p>{{ cpf | inverter}}</p>
+        <hr>
+        <input type="text" :value="cpf | cpf"/>
     </div>
 </template>
 
@@ -33,9 +35,13 @@
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        font-size: 2.5rem;
         text-align: center;
         color: #2c3e50;
         margin-top: 60px;
+    }
+
+    input {
         font-size: 2.5rem;
     }
 </style>
