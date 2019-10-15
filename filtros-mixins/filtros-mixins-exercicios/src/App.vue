@@ -16,16 +16,19 @@
             </ul>
             <input type="text" v-model="fruta" @keydown.enter="add()">
         </div>
+        <hr>
+        <p>{{ usuarioLogado }}</p>
     </div>
 </template>
 
 <script>
     import frutasMixin from './frutasMixin'
+    import usuarioMixin from './usuarioMixin'
     import Frutas from './Frutas.vue'
 
     export default {
         components: { Frutas },
-        mixins: [frutasMixin],
+        mixins: [frutasMixin, usuarioMixin],
         filters: {
             cpf(valor) {
                 const arr = valor.split('')
