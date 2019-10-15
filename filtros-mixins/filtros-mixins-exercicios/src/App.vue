@@ -7,11 +7,23 @@
         <p>{{ cpf | inverter}}</p>
         <hr>
         <input type="text" :value="cpf | cpf"/>
+        <hr>
+        <Frutas/>
+        <hr>
+        <div>
+            <ul>
+                <li v-for="fruta in frutas" :key="fruta">{{ fruta }}</li>
+            </ul>
+            <input type="text" v-model="fruta" @keydown.enter="add()">
+        </div>
     </div>
 </template>
 
 <script>
+    import Frutas from './Frutas.vue'
+
     export default {
+        components: { Frutas },
         filters: {
             cpf(valor) {
                 const arr = valor.split('')
@@ -23,7 +35,15 @@
         },
         data() {
             return {
-                cpf: '14452414525'
+                cpf: '14452414525',
+                fruta: '',
+                frutas: ['banana', 'maça', 'laranja']
+            }
+        },
+        methods: {
+            add() {
+                this.frutas.push(this.fruta);
+                this.fruta = '';
             }
         }
     }
