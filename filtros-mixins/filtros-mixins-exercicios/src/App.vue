@@ -42,6 +42,9 @@
             return {
                 cpf: '14452414525',
             }
+        },
+        created() {
+            console.log('Created - App.vue!');
         }
     }
 </script>

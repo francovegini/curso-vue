@@ -12,7 +12,10 @@
 
     export default {
         name: "Frutas",
-        mixins: [frutasMixin]
+        mixins: [frutasMixin],
+        created() {
+            console.log('Created - Frutas.vue!')
+        }
     }
 </script>
 
