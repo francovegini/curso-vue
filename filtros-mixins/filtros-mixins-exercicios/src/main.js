@@ -16,11 +16,11 @@ Vue.mixin({
     created() {
         console.log('Created - Mixin Global!');
     }
-})
+});
 
 new Vue({
     render: h => h(App),
     created() {
         console.log('Created - Vue Instance!');
     }
-}).$mount('#app')
+}).$mount('#app');
