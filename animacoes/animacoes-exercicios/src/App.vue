@@ -33,28 +33,11 @@
         font-size: 1.5rem;
     }
 
-    .fade-enter {
-
+    .fade-enter, .fade-leave-to {
+        opacity: 0;
     }
 
-    .fade-enter-active {
-
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 2s;
     }
-
-    .fade-enter-to {
-
-    }
-
-    .fade-leave {
-
-    }
-
-    .fade-leave-active {
-
-    }
-
-    .fade-leave-to {
-
-    }
-
 </style>
