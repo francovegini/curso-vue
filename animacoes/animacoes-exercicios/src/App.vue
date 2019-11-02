@@ -11,7 +11,7 @@
         </transition>
 
         <transition name="slide">
-            <b-alert variant="info" show v-if="exibir">{{ msg }}</b-alert>
+            <b-alert variant="info" show v-show="exibir">{{ msg }}</b-alert>
         </transition>
     </div>
 </template>
