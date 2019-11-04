@@ -14,8 +14,8 @@
         </transition>
     </div>
 </template>
-<script>
 
+<script>
     export default {
         data() {
             return {
@@ -71,5 +71,4 @@
     .slide-leave-active {
         animation: slide-out 2s ease;
     }
-
 </style>
