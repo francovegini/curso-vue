@@ -64,7 +64,7 @@
             },
             enter(el, done){
                 console.log('enter')
-                // done()
+                done()
             },
             afterEnter(el){
               console.log('afterEnter')
@@ -77,7 +77,7 @@
             },
             leave(el, done){
                 console.log('leave')
-                // done()
+                done()
             },
             afterLeave(el){
                 console.log('afterLeave')
