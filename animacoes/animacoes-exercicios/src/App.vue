@@ -63,7 +63,7 @@
                 console.log('beforeEnter')
             },
             enter(el, done){
-                console.log('enter')
+                console.log('enter');
                 done()
             },
             afterEnter(el){
@@ -76,7 +76,7 @@
                 console.log('beforeLeave')
             },
             leave(el, done){
-                console.log('leave')
+                console.log('leave');
                 done()
             },
             afterLeave(el){
