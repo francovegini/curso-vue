@@ -61,14 +61,10 @@
             }
         },
         methods: {
-            beforeEnter(el) {
-                this.larguraBase = 0;
-                el.style.width = `${this.larguraBase}px`;
-            },
-            enter(el, done) {
+            animar(el, done, negativo) {
                 let rodada = 1;
                 const temporizador = setInterval(() => {
-                    const novaLargura = this.larguraBase + rodada * 10;
+                    const novaLargura = this.larguraBase + (negativo ? -rodada * 10 : +rodada * 10);
                     el.style.width = `${novaLargura}px`;
                     rodada++;
                     if (rodada > 30) {
@@ -76,6 +72,13 @@
                         done()
                     }
                 }, 20)
+            },
+            beforeEnter(el) {
+                this.larguraBase = 0;
+                el.style.width = `${this.larguraBase}px`;
+            },
+            enter(el, done) {
+                this.animar(el, done, false);
             },
             afterEnter(el) {
                 console.log('afterEnter')
@@ -88,16 +91,7 @@
                 el.style.width = `${this.larguraBase}px`;
             },
             leave(el, done) {
-                let rodada = 1;
-                const temporizador = setInterval(() => {
-                    const novaLargura = this.larguraBase - rodada * 10;
-                    el.style.width = `${novaLargura}px`;
-                    rodada++;
-                    if (rodada > 30) {
-                        clearInterval(temporizador);
-                        done()
-                    }
-                }, 20)
+                this.animar(el, done, true);
             },
             afterLeave(el) {
                 console.log('afterLeave')
