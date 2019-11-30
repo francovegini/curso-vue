@@ -46,18 +46,36 @@
             <div v-if="exibir2" class="caixa"></div>
         </transition>
 
+        <hr>
+        <div class="mb-4">
+            <b-button variant="primary" class="mr-2"
+                      @click="componenteSelecionado = 'AlertInfo'">Info
+            </b-button>
+            <b-button variant="secondary"
+                      @click="componenteSelecionado = 'AlertWarn'">Warn
+            </b-button>
+        </div>
+        <transition name="fade" mode="out-in">
+            <component :is="componenteSelecionado"></component>
+        </transition>
     </div>
 </template>
 
 <script>
+
+    import AlertWarn from './AlertWarn';
+    import AlertInfo from './AlertInfo';
+
     export default {
+        components: { AlertWarn, AlertInfo },
         data() {
             return {
                 msg: 'Uma mensagem de informação para o usuário!',
                 exibir: false,
                 exibir2: true,
                 tipoAnimacao: 'fade',
-                larguraBase: 0
+                larguraBase: 0,
+                componenteSelecionado: 'AlertInfo'
             }
         },
         methods: {
