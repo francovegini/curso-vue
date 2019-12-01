@@ -99,10 +99,8 @@
                 this.animar(el, done, false);
             },
             afterEnter(el) {
-                console.log('afterEnter')
             },
             enterCancelled() {
-                console.log('enterCancelled')
             },
             beforeLeave(el) {
                 this.larguraBase = 300;
@@ -112,10 +110,8 @@
                 this.animar(el, done, true);
             },
             afterLeave(el) {
-                console.log('afterLeave')
             },
             leaveCancelled() {
-                console.log('leaveCancelled')
             }
 
         }
