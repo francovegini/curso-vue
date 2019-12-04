@@ -112,7 +112,7 @@
             enter(el, done) {
                 this.animar(el, done, false);
             },
-            afterEnter(el) {
+            afterEnter() {
             },
             enterCancelled() {
             },
@@ -123,7 +123,7 @@
             leave(el, done) {
                 this.animar(el, done, true);
             },
-            afterLeave(el) {
+            afterLeave() {
             },
             leaveCancelled() {
             }
