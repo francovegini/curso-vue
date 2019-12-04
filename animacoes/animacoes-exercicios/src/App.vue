@@ -1,63 +1,63 @@
 <template>
     <div id="app" class="container">
-<!--        <h1>Animações</h1>-->
-<!--        <hr>-->
-<!--        <b-button class="mb-4" variant="primary" @click="exibir = !exibir">-->
-<!--            Mostrar mensagem-->
-<!--        </b-button>-->
+        <h1>Animações</h1>
+        <hr>
+        <b-button class="mb-4" variant="primary" @click="exibir = !exibir">
+            Mostrar mensagem
+        </b-button>
 
-<!--        <transition name="fade" appear>-->
-<!--            <b-alert variant="info" show v-if="exibir">{{ msg }}</b-alert>-->
-<!--        </transition>-->
+        <transition name="fade" appear>
+            <b-alert variant="info" show v-if="exibir">{{ msg }}</b-alert>
+        </transition>
 
-<!--        <transition name="slide" appear>-->
-<!--            <b-alert variant="info" show v-show="exibir">{{ msg }}</b-alert>-->
-<!--        </transition>-->
+        <transition name="slide" appear>
+            <b-alert variant="info" show v-show="exibir">{{ msg }}</b-alert>
+        </transition>
 
-<!--        <transition enter-active-class="animated bounce"-->
-<!--                    leave-active-class="animated shake">-->
-<!--            <b-alert variant="info" show v-show="exibir">{{ msg }}</b-alert>-->
-<!--        </transition>-->
+        <transition enter-active-class="animated bounce"
+                    leave-active-class="animated shake">
+            <b-alert variant="info" show v-show="exibir">{{ msg }}</b-alert>
+        </transition>
 
-<!--        <hr>-->
-<!--        <b-select v-model="tipoAnimacao" class="mb-4">-->
-<!--            <option value="fade">Fade</option>-->
-<!--            <option value="slide">Slide</option>-->
-<!--        </b-select>-->
+        <hr>
+        <b-select v-model="tipoAnimacao" class="mb-4">
+            <option value="fade">Fade</option>
+            <option value="slide">Slide</option>
+        </b-select>
 
-<!--        <transition :name="tipoAnimacao" mode="out-in">-->
-<!--            <b-alert variant="info" show v-if="exibir" key="info">{{ msg }}</b-alert>-->
-<!--            <b-alert variant="warning" show v-else key="warn">{{ msg }}</b-alert>-->
-<!--        </transition>-->
+        <transition :name="tipoAnimacao" mode="out-in">
+            <b-alert variant="info" show v-if="exibir" key="info">{{ msg }}</b-alert>
+            <b-alert variant="warning" show v-else key="warn">{{ msg }}</b-alert>
+        </transition>
 
-<!--        <hr>-->
-<!--        <button @click="exibir2 = !exibir2">Alternar</button>-->
-<!--        <transition-->
-<!--                :css="false"-->
-<!--                @before-enter="beforeEnter"-->
-<!--                @enter="enter"-->
-<!--                @after-enter="afterEnter"-->
-<!--                @enter-cancelled="enterCancelled"-->
+        <hr>
+        <button @click="exibir2 = !exibir2">Alternar</button>
+        <transition
+                :css="false"
+                @before-enter="beforeEnter"
+                @enter="enter"
+                @after-enter="afterEnter"
+                @enter-cancelled="enterCancelled"
 
-<!--                @before-leave="beforeLeave"-->
-<!--                @leave="leave"-->
-<!--                @after-leave="afterLeave"-->
-<!--                @leave-cancelled="leaveCancelled">-->
-<!--            <div v-if="exibir2" class="caixa"></div>-->
-<!--        </transition>-->
+                @before-leave="beforeLeave"
+                @leave="leave"
+                @after-leave="afterLeave"
+                @leave-cancelled="leaveCancelled">
+            <div v-if="exibir2" class="caixa"></div>
+        </transition>
 
-<!--        <hr>-->
-<!--        <div class="mb-4">-->
-<!--            <b-button variant="primary" class="mr-2"-->
-<!--                      @click="componenteSelecionado = 'AlertInfo'">Info-->
-<!--            </b-button>-->
-<!--            <b-button variant="secondary"-->
-<!--                      @click="componenteSelecionado = 'AlertWarn'">Warn-->
-<!--            </b-button>-->
-<!--        </div>-->
-<!--        <transition name="fade" mode="out-in">-->
-<!--            <component :is="componenteSelecionado"></component>-->
-<!--        </transition>-->
+        <hr>
+        <div class="mb-4">
+            <b-button variant="primary" class="mr-2"
+                      @click="componenteSelecionado = 'AlertInfo'">Info
+            </b-button>
+            <b-button variant="secondary"
+                      @click="componenteSelecionado = 'AlertWarn'">Warn
+            </b-button>
+        </div>
+        <transition name="fade" mode="out-in">
+            <component :is="componenteSelecionado"></component>
+        </transition>
 
         <hr>
         <b-button @click="adicionarAluno" class="mb-4">Adicionar aluno</b-button>
