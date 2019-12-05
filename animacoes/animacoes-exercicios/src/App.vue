@@ -61,9 +61,11 @@
 
         <hr>
         <b-button @click="adicionarAluno" class="mb-4">Adicionar aluno</b-button>
-        <b-list-group v-for="(aluno, i) in alunos" :key="aluno">
-            <b-list-group-item @click="removerAluno(i)">{{ aluno}}</b-list-group-item>
-        </b-list-group>
+        <transition-group name="slide">
+            <b-list-group v-for="(aluno, i) in alunos" :key="aluno">
+                <b-list-group-item @click="removerAluno(i)">{{ aluno}}</b-list-group-item>
+            </b-list-group>
+        </transition-group>
     </div>
 </template>
 
@@ -90,7 +92,7 @@
                 const s = Math.random().toString(36).substring(2);
                 this.alunos.push(s);
             },
-            removerAluno(index){
+            removerAluno(index) {
                 this.alunos.splice(index, 1);
             },
             animar(el, done, negativo) {
@@ -183,11 +185,17 @@
     }
 
     .slide-leave-active {
+        position: absolute;
+        width: 100%;
         animation: slide-out 2s ease;
         transition: opacity 2s;
     }
 
     .slide-enter, .slide-leave-to {
         opacity: 0;
+    }
+
+    .slide-move {
+        transition: transform 1s;
     }
 </style>
