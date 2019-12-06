@@ -1,13 +1,11 @@
 <template>
     <div class="result">
-        
+
     </div>
 </template>
 
 <script>
-export default {
-    
-}
+    export default {}
 </script>
 
 <style>
@@ -44,7 +42,7 @@ export default {
         background-color: #FFF;
         color: #30863d;
         font-weight: 600;
-    } 
+    }
 
     .result.wrong button {
         color: #bb2814;

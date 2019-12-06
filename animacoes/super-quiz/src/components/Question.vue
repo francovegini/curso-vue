@@ -1,13 +1,11 @@
 <template>
     <div class="question">
-        
+
     </div>
 </template>
 
 <script>
-export default {
-    
-}
+    export default {}
 </script>
 
 <style>
