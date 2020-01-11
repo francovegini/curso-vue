@@ -1,11 +1,19 @@
 <template>
     <div class="result">
-
+        <span v-if="result">Resposta certa! :)</span>
+        <span v-else>Resposta errada! :(</span>
     </div>
 </template>
 
 <script>
-    export default {}
+    export default {
+        props: {
+            result: {
+                type: Boolean,
+                required: true
+            }
+        }
+    }
 </script>
 
 <style>
