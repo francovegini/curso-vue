@@ -1,11 +1,23 @@
 <template>
     <div class="question">
-
+        <span>{{ question.text }}</span>
+        <ul class="answers">
+            <li>
+                <span class="number"> {{ i + 1}}</span>
+            </li>
+        </ul>
     </div>
 </template>
 
 <script>
-    export default {}
+    export default {
+        props: {
+            question: {
+                type: Object,
+                required: true
+            }
+        }
+    }
 </script>
 
 <style>
