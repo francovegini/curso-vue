@@ -5,7 +5,21 @@
 </template>
 
 <script>
-    export default {}
+    import questions from "./util/questions";
+    import Question from './components/Question';
+    import Result from './components/Result';
+
+    export default {
+        components: { Question, Result },
+        data() {
+            return {
+                result: false,
+                questionMode: true,
+                questions,
+            }
+        }
+
+    }
 </script>
 
 <style>
