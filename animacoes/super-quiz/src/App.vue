@@ -16,6 +16,7 @@
                 result: false,
                 questionMode: true,
                 questions,
+                currentQuestion: 0
             }
         }
 
