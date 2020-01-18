@@ -1,6 +1,6 @@
 <template>
-    <div class="result">
-        <span v-if="result" :class="{wrong: !result}">Resposta certa! :)</span>
+    <div class="result" :class="{wrong: !result}">
+        <span v-if="result">Resposta certa! :)</span>
         <span v-else>Resposta errada! :(</span>
     </div>
 </template>
