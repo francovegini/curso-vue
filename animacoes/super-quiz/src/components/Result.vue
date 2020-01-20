@@ -1,9 +1,9 @@
 <template>
     <div class="result" :class="{wrong: !result}">
-        <span v-if="result">Resposta certa! :)</span>
-        <span v-else>Resposta errada! :(</span>
+        <span v-if="result">Resposta Certa! :)</span>
+        <span v-else>Resposta Errada! :(</span>
         <hr>
-        <button @click="$emit('confirmed')">Próxima pergunta</button>
+        <button @click="$emit('confirmed')">Próxima Pergunta</button>
     </div>
 </template>
 
@@ -42,6 +42,7 @@
         background-color: #f05250;
         color: #bb2814;
     }
+
 
     .result button {
         outline: none;
