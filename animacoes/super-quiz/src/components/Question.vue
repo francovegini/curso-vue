@@ -31,7 +31,6 @@
         width: 70%;
         border-radius: 20px;
         font-size: 2.5rem;
-
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -50,7 +49,6 @@
         background-color: #89c454;
         border-radius: 8px;
         width: 40%;
-
         display: flex;
     }
 
