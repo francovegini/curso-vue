@@ -6,7 +6,13 @@
 
 <script>
 export default {
-
+	created() {
+		// Teste axios
+		// this.$http.post('usuarios.json', {
+		// 	nome: 'Franco',
+		// 	email: 'francovegini@hotmail.com'
+		// }).then(res => console.log(res));
+	}
 }
 </script>
 
