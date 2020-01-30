@@ -32,19 +32,12 @@
                 }
             }
         },
-		methods: {
-        	salvar() {
-        		console.log(this.usuario)
-			}
-		}
-
-        // created() {
-        // 	// Teste axios
-        // 	this.$http.post('usuarios.json', {
-        // 		nome: 'Franco',
-        // 		email: 'francovegini@hotmail.com'
-        // 	}).then(res => console.log(res));
-        // }
+        methods: {
+            salvar() {
+                this.$http.post('usuarios.json', this.usuario)
+                    .then(res => console.log(res));
+            }
+        }
     }
 </script>
 
