@@ -35,7 +35,10 @@
         methods: {
             salvar() {
                 this.$http.post('usuarios.json', this.usuario)
-                    .then(res => console.log(res));
+                    .then(res => {
+                    	this.usuario.nome = '';
+                    	this.usuario.email = '';
+					});
             }
         }
     }
