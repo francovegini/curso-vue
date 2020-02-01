@@ -27,8 +27,8 @@
         data() {
             return {
                 usuario: {
-                    nome: '',
-                    email: ''
+                    nome: "",
+                    email: ""
                 }
             }
         },
@@ -36,8 +36,8 @@
             salvar() {
                 this.$http.post('usuarios.json', this.usuario)
                     .then(res => {
-                    	this.usuario.nome = '';
-                    	this.usuario.email = '';
+                    	this.usuario.nome = "";
+                    	this.usuario.email = "";
 					});
             }
         }
