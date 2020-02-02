@@ -17,7 +17,6 @@
             <hr>
             <b-button @click="salvar" size="lg" variant="primary">Salvar
             </b-button>
-
         </b-card>
     </div>
 </template>
@@ -36,9 +35,9 @@
             salvar() {
                 this.$http.post('usuarios.json', this.usuario)
                     .then(res => {
-                    	this.usuario.nome = "";
-                    	this.usuario.email = "";
-					});
+                        this.usuario.nome = "";
+                        this.usuario.email = "";
+                    });
             }
         }
     }
