@@ -10,5 +10,10 @@ Vue.use({
         Vue.prototype.$http = Axios.create({
             baseURL: "https://curso-vue-312f1.firebaseio.com/"
         })
+
+        Vue.prototype.$http.interceptors.request.use(config => {
+            console.log("Interceptando requisições: " + config.method);
+            return config;
+        })
     }
 })
