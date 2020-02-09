@@ -14,5 +14,12 @@ Vue.use({
             console.log("Interceptando requisições: " + config.method);
             return config;
         }, error => Promise.reject(error))
+
+        Vue.prototype.$http.interceptors.response.use(res => {
+            const array = [];
+            for (let key in res.data) {
+                array.push({ id: key, ...res.data[key] });
+            }
+        }, error => Promise.reject(error))
     }
 })
