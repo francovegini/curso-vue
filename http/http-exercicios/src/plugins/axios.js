@@ -20,6 +20,8 @@ Vue.use({
             for (let key in res.data) {
                 array.push({ id: key, ...res.data[key] });
             }
+
+            res.data = array;
         }, error => Promise.reject(error))
     }
 })
