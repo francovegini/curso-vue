@@ -2,6 +2,7 @@ import Vue from "vue";
 import Axios from "axios";
 
 // axios.defaults.baseURL = "https://curso-vue-312f1.firebaseio.com/";
+axios.defaults.headers.common['Authorization'] = 'abc123';
 
 Vue.use({
     install(Vue) {
