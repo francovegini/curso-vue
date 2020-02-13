@@ -26,6 +26,12 @@
                 <strong>ID: </strong> {{ id }}<br>
                 <strong>Nome: </strong> {{ usuario.nome }}<br>
                 <strong>E-mail: </strong> {{ usuario.email }}<br>
+                <b-button variant="warning" size="lg"
+                          @click="carregar(id)">Carregar
+                </b-button>
+                <b-button variant="danger" size="lg" class="ml-2"
+                          @click="excluir(id)">Excluir
+                </b-button>
             </b-list-group-item>
         </b-list-group>
     </div>
@@ -36,6 +42,7 @@
         data() {
             return {
                 usuarios: [],
+                id: null,
                 usuario: {
                     nome: "",
                     email: ""
@@ -43,12 +50,22 @@
             }
         },
         methods: {
+            limpar() {
+                this.usuario.nome = '';
+                this.usuario.email = '';
+                this.id = null;
+            },
+            carregar(id) {
+                this.id = id;
+                this.usuario = { ...this.usuarios[id] }
+            },
+            excluir(id) {
+                this.$http.delete((`/usuarios/${id}.json`))
+                    .then(() => this.limpar())
+            },
             salvar() {
                 this.$http.post("usuarios.json", this.usuario)
-                    .then(resp => {
-                        this.usuario.nome = "";
-                        this.usuario.email = "";
-                    });
+                    .then(() => this.limpar());
             },
             obterUsuarios() {
                 this.$http.get("usuarios.json")

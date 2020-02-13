@@ -19,7 +19,7 @@ Vue.use({
         })
 
         Vue.prototype.$http.interceptors.request.use(config => {
-            console.log("Interceptando requisições: " + config.method);
+            // console.log("Interceptando requisições: " + config.method);
             return config;
         }, error => Promise.reject(error))
 
