@@ -64,7 +64,9 @@
                     .then(() => this.limpar())
             },
             salvar() {
-                this.$http.post("usuarios.json", this.usuario)
+                const metodo = this.id ? 'patch' : 'post';
+                const finalUrl = this.id ? `/${this.id}.json` : '.json';
+                this.$http[metodo](`usuarios${finalUrl}`, this.usuario)
                     .then(() => this.limpar());
             },
             obterUsuarios() {
