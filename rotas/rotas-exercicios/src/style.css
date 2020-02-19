@@ -13,7 +13,7 @@ h1, h2, h3 {
 }
 
 .menu ul {
-    display: flex;    
+    display: flex;
     background-color: #777;
     list-style: none;
     padding: 0;
