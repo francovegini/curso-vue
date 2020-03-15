@@ -14,6 +14,10 @@
     export default {
         name: "UsuarioDetalhe",
         props: ['id'],
+        beforeRouteEnter(to, from, next){
+            console.log("Antes da rota usuario-detalhe -> beforeRouteEnter (dentro do componente)");
+            next();
+        }
         // data() {
         //     return {
         //         id: this.$route.params.id
