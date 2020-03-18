@@ -19,14 +19,10 @@
             }
         },
         beforeRouteLeave(to, from, next) {
-            if(this.confirmou){
+            if (this.confirmou) {
                 next();
             }
-            if(confirm("Tem certeza?")) {
-                next();
-            } else {
-                next(false);
-            }
+            confirm("Tem certeza?") ? next() : next(false);
         }
     }
 </script>
