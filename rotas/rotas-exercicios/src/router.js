@@ -5,11 +5,13 @@ import Inicio from "./components/Inicio";
 import Usuario from "./components/usuario/Usuario";
 import UsuarioLista from "./components/usuario/UsuarioLista";
 import UsuarioDetalhe from "./components/usuario/UsuarioDetalhe";
-import UsuarioEditar from "./components/usuario/UsuarioEditar";
+// import UsuarioEditar from "./components/usuario/UsuarioEditar";
 import Menu from "./components/template/Menu";
 import MenuAlt from "./components/template/MenuAlt";
 
 Vue.use(Router);
+
+const UsuarioEditar = () => import('./components/usuario/UsuarioEditar');
 
 const router = new Router({
     mode: 'hash',
