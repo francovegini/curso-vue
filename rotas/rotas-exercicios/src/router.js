@@ -10,8 +10,8 @@ import MenuAlt from "./components/template/MenuAlt";
 
 Vue.use(Router);
 
-const Usuario = () => import('./components/usuario/Usuario');
-const UsuarioLista = () => import('./components/usuario/UsuarioLista');
+const Usuario = () => import(/* webpackChunkName: "usuario" */'./components/usuario/Usuario');
+const UsuarioLista = () => import(/* webpackChunkName: "usuario" */'./components/usuario/UsuarioLista');
 const UsuarioDetalhe = () => import('./components/usuario/UsuarioDetalhe');
 const UsuarioEditar = () => import('./components/usuario/UsuarioEditar');
 
