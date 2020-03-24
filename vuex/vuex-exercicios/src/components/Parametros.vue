@@ -14,14 +14,14 @@
 </template>
 
 <script>
-export default {
-    data() {
-        return {
-            quantidade: 0,
-            preco: 0
+    export default {
+        data() {
+            return {
+                quantidade: 0,
+                preco: 0
+            }
         }
     }
-}
 </script>
 
 <style>

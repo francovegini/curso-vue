@@ -12,28 +12,28 @@
 
 <script>
 
-export default {
-    data() {
-        return {
-            sequencia: 1,
-            quantidade: 1,
-            preco: 9.99,
-        }
-    },
-    methods: {
-        adicionar() {
-            const produto = {
-                id: this.sequencia,
-                nome: `Produto ${this.sequencia}`,
-                quantidade: this.quantidade,
-                preco: this.preco
+    export default {
+        data() {
+            return {
+                sequencia: 1,
+                quantidade: 1,
+                preco: 9.99,
             }
-            this.sequencia++
-            // eslint-disable-next-line
-            console.log(produto)
+        },
+        methods: {
+            adicionar() {
+                const produto = {
+                    id: this.sequencia,
+                    nome: `Produto ${this.sequencia}`,
+                    quantidade: this.quantidade,
+                    preco: this.preco
+                }
+                this.sequencia++
+                // eslint-disable-next-line
+                console.log(produto)
+            }
         }
     }
-}
 </script>
 
 <style>

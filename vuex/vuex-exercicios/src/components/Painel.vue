@@ -13,9 +13,9 @@
 </template>
 
 <script>
-export default {
-    props: ['titulo', 'notificacao']
-}
+    export default {
+        props: ['titulo', 'notificacao']
+    }
 </script>
 
 <style scoped>
@@ -51,15 +51,39 @@ export default {
         width: 60px;
     }
 
-    .painel[vermelho] .cabecalho { color: #FFF; background-color: #c62828; }
-    .painel[vermelho] .conteudo { background-color: #f44336; }
+    .painel[vermelho] .cabecalho {
+        color: #FFF;
+        background-color: #c62828;
+    }
 
-    .painel[verde] .cabecalho { color: #FFF; background-color: #2E7D32; }
-    .painel[verde] .conteudo { background-color: #4CAF50; }
-    
-    .painel[azul] .cabecalho { color: #FFF; background-color: #1565C0; }
-    .painel[azul] .conteudo { background-color: #2196F3; }
+    .painel[vermelho] .conteudo {
+        background-color: #f44336;
+    }
 
-    .painel[roxo] .cabecalho { color: #FFF; background-color: #6A1B9A; }
-    .painel[roxo] .conteudo { background-color: #9C27B0; }
+    .painel[verde] .cabecalho {
+        color: #FFF;
+        background-color: #2E7D32;
+    }
+
+    .painel[verde] .conteudo {
+        background-color: #4CAF50;
+    }
+
+    .painel[azul] .cabecalho {
+        color: #FFF;
+        background-color: #1565C0;
+    }
+
+    .painel[azul] .conteudo {
+        background-color: #2196F3;
+    }
+
+    .painel[roxo] .cabecalho {
+        color: #FFF;
+        background-color: #6A1B9A;
+    }
+
+    .painel[roxo] .conteudo {
+        background-color: #9C27B0;
+    }
 </style>
