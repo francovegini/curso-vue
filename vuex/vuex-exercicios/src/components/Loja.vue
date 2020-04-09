@@ -28,7 +28,7 @@
             }
         },
         methods: {
-            ...mapActions(['adicionarProduto']),
+            ...mapActions('carrinho', ['adicionarProduto']),
             adicionar() {
                 const produto = {
                     id: this.sequencia,
