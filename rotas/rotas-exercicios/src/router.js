@@ -11,7 +11,7 @@ import MenuAlt from "./components/template/MenuAlt";
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
     mode: 'hash',
     routes: [
         {
@@ -46,3 +46,10 @@ export default new Router({
         }
     ]
 })
+
+router.beforeEach((to, from, next) => {
+    console.log("Antes das rotas -> Forma global");
+    next();
+})
+
+export default router
