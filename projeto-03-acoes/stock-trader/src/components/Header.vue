@@ -1,13 +1,13 @@
 <template>
-    $END$
+    <h1>Cabeçalho</h1>
 </template>
 
 <script>
 export default {
-    name: "header"
+    name: "Header"
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>
