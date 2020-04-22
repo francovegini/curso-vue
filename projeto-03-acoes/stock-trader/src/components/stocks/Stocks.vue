@@ -1,10 +1,10 @@
 <template>
-    <h1>Ação (Portfólio)</h1>
+    <h1>Ações</h1>
 </template>
 
 <script>
 export default {
-    name: "Stock"
+    name: "Stocks"
 }
 </script>
 
