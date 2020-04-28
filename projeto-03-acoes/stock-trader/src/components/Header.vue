@@ -9,6 +9,24 @@
             <v-btn flat to="/portfolio">Portfolio</v-btn>
             <v-btn flat to="/stocks">Ações</v-btn>
         </v-toolbar-items>
+
+        <v-spacer></v-spacer>
+
+        <v-toolbar-items>
+            <v-btn flat>Finalizar Dia</v-btn>
+            <v-menu offset-y>
+                <v-btn flat slot="activator">Salvar & Carregar</v-btn>
+                <v-list>
+                    <v-list-tile>
+                        <v-list-tile-title>Salvar dados</v-list-tile-title>
+                    </v-list-tile>
+                    <v-list-tile>
+                        <v-list-tile-title>Carregar dados</v-list-tile-title>
+                    </v-list-tile>
+                </v-list>
+            </v-menu>
+        </v-toolbar-items>
+
     </v-toolbar>
 </template>
 
