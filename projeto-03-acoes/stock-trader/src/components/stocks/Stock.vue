@@ -1,5 +1,5 @@
 <template>
-    <v-flex class="pr-3 pb-3">
+    <v-flex class="pr-3 pb-3" xs12 md6 lg4>
         <v-card class="green darken-3 white--text">
             <v-card-title class="headline">
                 <strong>NOME <small>(Preço: PRECO)</small></strong>
