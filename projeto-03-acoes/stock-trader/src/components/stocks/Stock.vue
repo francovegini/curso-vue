@@ -2,7 +2,7 @@
     <v-flex class="pr-3 pb-3" xs12 md6 lg4>
         <v-card class="green darken-3 white--text">
             <v-card-title class="headline">
-                <strong>NOME <small>(Preço: PRECO)</small></strong>
+                <strong>{{ stock.name }} <small>(Preço: {{ stock.price }})</small></strong>
             </v-card-title>
         </v-card>
         <v-card>
@@ -16,7 +16,8 @@
 
 <script>
 export default {
-    name: "Stock"
+    name: "Stock",
+    props: ["stock"]
 }
 </script>
 
