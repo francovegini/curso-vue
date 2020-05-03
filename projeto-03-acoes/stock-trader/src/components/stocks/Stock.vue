@@ -7,7 +7,8 @@
         </v-card>
         <v-card>
             <v-container fill-height>
-                <v-text-field label="Quantidade" type="number"/>
+                <v-text-field label="Quantidade" type="number"
+                              v-model.number="quantity"/>
                 <v-btn class="green darken-3 white--text">Comprar</v-btn>
             </v-container>
         </v-card>
@@ -17,7 +18,12 @@
 <script>
 export default {
     name: "Stock",
-    props: ["stock"]
+    props: ["stock"],
+    data() {
+        return {
+            quantity: 0
+        }
+    }
 }
 </script>
 
