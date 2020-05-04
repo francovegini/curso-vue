@@ -9,7 +9,9 @@
             <v-container fill-height>
                 <v-text-field label="Quantidade" type="number"
                               v-model.number="quantity"/>
-                <v-btn class="green darken-3 white--text">Comprar</v-btn>
+                <v-btn class="green darken-3 white--text"
+                       @click="buyStock">Comprar
+                </v-btn>
             </v-container>
         </v-card>
     </v-flex>
@@ -22,6 +24,18 @@ export default {
     data() {
         return {
             quantity: 0
+        }
+    },
+    methods: {
+        buyStock() {
+            const order = {
+                stockId: this.stock.id,
+                stockPrice: this.stock.price,
+                quantity: this.quantity
+            }
+
+            console.log(order);
+            this.quantity = 0;
         }
     }
 }
