@@ -1,3 +1,5 @@
+import stocks from '@/data/stocks';
+
 export default {
     state: {
         stocks: []
@@ -12,7 +14,12 @@ export default {
             commit()
         },
         initStocks({ commit }) {
-          commit('setStocks', )
+          commit('setStocks', stocks)
+        }
+    },
+    getters: {
+        stocks(state) {
+            return state.stocks;
         }
     }
 }
