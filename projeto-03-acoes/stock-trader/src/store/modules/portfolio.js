@@ -17,15 +17,20 @@ export default {
             }
             state.funds -= stockPrice * quantity;
         },
-        sellStock(state, { stockId, quantity, stockPrice }){
+        sellStock(state, { stockId, quantity, stockPrice }) {
             const record = state.stocks.find(e => e.id == stockId);
 
-            if(record.quantity > quantity){
+            if (record.quantity > quantity) {
                 record.quantity -= quantity;
             } else {
                 state.stocks.splice(state.stocks.indexOf(record), 1)
             }
             state.funds += stockPrice * quantity;
+        }
+    },
+    actions: {
+        sellStock({ commit }, order){
+            commit('sellStock', order)
         }
     }
 }
