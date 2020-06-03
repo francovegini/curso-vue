@@ -14,13 +14,18 @@
             </span>
         </v-sheet>
         <v-divider class="my-4"/>
-        <p><strong>Seu saldo:</strong> {{ funds }}</p>
+        <p class="display-1"><strong>Seu saldo:</strong> {{ funds }}</p>
     </div>
 </template>
 
 <script>
 export default {
-    name: "Home"
+    name: "Home",
+    computed: {
+        funds() {
+            return this.$store.getters.funds;
+        }
+    }
 }
 </script>
 
