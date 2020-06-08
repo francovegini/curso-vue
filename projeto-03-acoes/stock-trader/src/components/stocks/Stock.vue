@@ -8,7 +8,7 @@
         <v-card>
             <v-container fill-height>
                 <v-text-field label="Quantidade" type="number"
-                              :error="insufficientFunds"
+                              :error="insufficientFunds || !Number.isInteger(quantity)"
                               v-model.number="quantity"/>
                 <v-btn class="green darken-3 white--text"
                        :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(quantity)"
