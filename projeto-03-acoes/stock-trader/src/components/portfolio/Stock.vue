@@ -30,6 +30,11 @@ export default {
             quantity: 0
         }
     },
+    computed: {
+      insufficientQuantity() {
+          return this.quantity > this.stock.quantity;
+      }
+    },
     methods: {
         sellStock() {
             const order = {
