@@ -12,6 +12,7 @@
         <v-card>
             <v-container fill-height>
                 <v-text-field label="Quantidade" type="number"
+                              :error="insufficientQuantity || !Number.isInteger(quantity)"
                               v-model.number="quantity"/>
                 <v-btn class="blue darken-3 white--text"
                        :disabled="insufficientQuantity || quantity <= 0 || !Number.isInteger(quantity)"
