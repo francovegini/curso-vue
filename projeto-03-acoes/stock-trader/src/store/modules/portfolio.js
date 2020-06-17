@@ -27,13 +27,13 @@ export default {
             }
             state.funds += stockPrice * quantity;
         },
-        setPortfolio(state, portfolio){
+        setPortfolio(state, portfolio) {
             state.funds = portfolio.funds;
             state.stocks = portfolio.stockPortfolio ? portfolio.stockPortfolio : [];
         }
     },
     actions: {
-        sellStock({ commit }, order){
+        sellStock({ commit }, order) {
             commit('sellStock', order)
         }
     },
