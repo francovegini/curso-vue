@@ -1,5 +1,5 @@
 <template>
-  <button class="button" :class="{ double, trilpe, operation }">
+  <button class="button" :class="{ double, triple, operation }">
     {{ label }}
   </button>
 </template>
@@ -29,6 +29,27 @@ export default {
   border-right: var(--border-button);
   border-bottom: var(--border-button);
   outline: none;
+}
+
+.button:active {
+  background-color: #ccc;
+}
+
+.button.double {
+  grid-column: span 2;
+}
+
+.button.triple {
+  grid-column: span 3;
+}
+
+.button-operation {
+  background-color: #fa8231;
+  color: #fff;
+}
+
+.button-operation:active {
+  background-color: #fa8231cc;
 }
 
 </style>
