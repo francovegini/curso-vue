@@ -43,12 +43,12 @@ export default {
   grid-column: span 3;
 }
 
-.button-operation {
+.button.operation {
   background-color: #fa8231;
   color: #fff;
 }
 
-.button-operation:active {
+.button.operation:active {
   background-color: #fa8231cc;
 }
 
