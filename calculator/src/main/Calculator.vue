@@ -27,7 +27,18 @@ import Button from "@/components/Button";
 
 export default {
   name: "Calculator",
-  components: { Button, Display }
+  components: { Button, Display },
+  methods: {
+    clearMemory(){
+      console.log("Limpar memória");
+    },
+    setOperation(operation) {
+      console.log("Operacao " + operation);
+    },
+    addDigit(n) {
+      console.log("Dígito " + n)
+    }
+  }
 }
 </script>
 
