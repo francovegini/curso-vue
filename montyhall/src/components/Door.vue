@@ -1,11 +1,11 @@
 <template>
   <div class="door-area">
-    <div class="door-frame">
+    <div class="door-frame" :class="{ selected }">
       <Gift v-if="open && hasGift"/>
     </div>
-    <div class="door">
-      <div class="number">{{  number }}</div>
-      <div class="knob"></div>
+    <div class="door" @click="selected = !selected">
+      <div class="number" :class="{ selected }">{{ number }}</div>
+      <div class="knob" :class="{ selected }"></div>
     </div>
   </div>
 </template>
@@ -32,6 +32,7 @@ export default {
 <style>
 :root {
   --door-border: 5px solid brown;
+  --selected-border: 5px solid yellow;
 }
 
 .door-area {
@@ -80,6 +81,20 @@ export default {
   background-color: brown;
   align-self: flex-start;
   margin-top: 60px;
+}
+
+.door-frame.selected {
+  border-left: var(--selected-border);
+  border-top: var(--selected-border);
+  border-right: var(--selected-border);
+}
+
+.door .number.selected {
+  color: yellow;
+}
+
+.door .knob.selected {
+  background-color: yellow;
 }
 
 </style>
